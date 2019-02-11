@@ -64,9 +64,13 @@ export async function showLocation (options) {
 
   switch (app) {
     case 'apple-maps':
-      url = prefixes['apple-maps']
-      url = (useSourceDestiny) ? `${url}?saddr=${sourceLatLng}&daddr=${latlng}` : `${url}?ll=${latlng}`
-      url += `&q=${title ? `${encodedTitle}&address=${encodedTitle}` : 'Location'}`
+      url = `${prefixes[`apple-maps`]}maps?`;
+
+      if (useSourceDestiny) {
+        url += `saddr=${sourceLatLng}&`;
+      }
+
+      url += `daddr=${latlng}&directionsmode=driving`;
       break
     case 'google-maps':
       url = 'https://www.google.com/maps/dir/';
