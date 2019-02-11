@@ -69,14 +69,9 @@ export async function showLocation (options) {
       url += `&q=${title ? `${encodedTitle}&address=${encodedTitle}` : 'Location'}`
       break
     case 'google-maps':
-      let useTitleForQuery = !options.googleForceLatLon && title
-      let googlePlaceId = options.googlePlaceId ? options.googlePlaceId : null
-
       url = prefixes['google-maps']
-      url += `?q=${useTitleForQuery ? encodedTitle : latlng}`
-      url += (isIOS) ? '&api=1' : ''
-      url += (googlePlaceId) ? `&query_place_id=${googlePlaceId}` : ''
-      url += (useSourceDestiny) ? `&saddr=${sourceLatLng}&daddr=${latlng}` : `&ll=${latlng}`
+      
+      url += `?api=1&destination=${encodedTitle || latlng}`;
       break
     case 'citymapper':
       url = `${prefixes['citymapper']}directions?endcoord=${latlng}`
