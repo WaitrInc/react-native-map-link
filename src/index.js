@@ -64,19 +64,17 @@ export async function showLocation (options) {
 
   switch (app) {
     case 'apple-maps':
-      url = prefixes['apple-maps']
-      url = (useSourceDestiny) ? `${url}?saddr=${sourceLatLng}&daddr=${latlng}` : `${url}?ll=${latlng}`
-      url += `&q=${title ? `${encodedTitle}&address=${encodedTitle}` : 'Location'}`
+      url = `${prefixes[`apple-maps`]}maps?`;
+
+      if (useSourceDestiny) {
+        url += `saddr=${sourceLatLng}&`;
+      }
+
+      url += `daddr=${latlng}&directionsmode=driving`;
       break
     case 'google-maps':
-      let useTitleForQuery = !options.googleForceLatLon && title
-      let googlePlaceId = options.googlePlaceId ? options.googlePlaceId : null
-
-      url = prefixes['google-maps']
-      url += `?q=${useTitleForQuery ? encodedTitle : latlng}`
-      url += (isIOS) ? '&api=1' : ''
-      url += (googlePlaceId) ? `&query_place_id=${googlePlaceId}` : ''
-      url += (useSourceDestiny) ? `&saddr=${sourceLatLng}&daddr=${latlng}` : `&ll=${latlng}`
+      url = 'https://www.google.com/maps/dir/';
+      url += `?api=1&destination=${encodedTitle || latlng}`;
       break
     case 'citymapper':
       url = `${prefixes['citymapper']}directions?endcoord=${latlng}`

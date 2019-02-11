@@ -1,34 +1,34 @@
 {
-   "name": "@waitr/react-native-map-link",
-   "version": "2.1.6",
-   "description": "Open the map app of the user's choice with a specific location. Forked to resolve a few map navigation issues.",
-   "main": "index.js",
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/WaitrInc/react-native-map-link.git"
-   },
-   "keywords": [
-      "react-native",
-      "react-component",
-      "maps",
-      "link",
-      "linking",
-      "react",
-      "ios",
-      "android"
-   ],
-   "author": "Thomas Schoffelen <thomas@includable.com> (https://includable.com/)",
-   "license": "MIT",
-   "bugs": {
-      "url": "https://github.com/WaitrInc/react-native-map-link/issues"
-   },
-   "homepage": "https://github.com/WaitrInc/react-native-map-link#readme",
-   "peerDependencies": {
-      "react": ">=16.0.0",
-      "react-native": ">=0.40.0"
-   },
-   "dependencies": {
-      "prop-types": "^15.6.1",
-      "react-native-modal": "^6.4.0"
-   }
+  "name": "@waitr/react-native-map-link",
+  "version": "2.1.7",
+  "description": "Open the map app of the user's choice with a specific location. Forked to resolve a few map navigation issues.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaitrInc/react-native-map-link.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "maps",
+    "link",
+    "linking",
+    "react",
+    "ios",
+    "android"
+  ],
+  "author": "Thomas Schoffelen <thomas@includable.com> (https://includable.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WaitrInc/react-native-map-link/issues"
+  },
+  "homepage": "https://github.com/WaitrInc/react-native-map-link#readme",
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-native": ">=0.40.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react-native-modal": "^6.4.0"
+  }
 }
