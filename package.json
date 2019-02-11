@@ -1,6 +1,6 @@
 {
   "name": "@waitr/react-native-map-link",
-  "version": "2.1.7",
+  "version": "2.1.6",
   "description": "Open the map app of the user's choice with a specific location. Forked to resolve a few map navigation issues.",
   "main": "index.js",
   "repository": {
