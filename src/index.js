@@ -69,8 +69,7 @@ export async function showLocation (options) {
       url += `&q=${title ? `${encodedTitle}&address=${encodedTitle}` : 'Location'}`
       break
     case 'google-maps':
-      url = prefixes['google-maps']
-      
+      url = 'https://www.google.com/maps/dir/';
       url += `?api=1&destination=${encodedTitle || latlng}`;
       break
     case 'citymapper':
